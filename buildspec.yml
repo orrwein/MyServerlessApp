@@ -2,8 +2,8 @@ version: 0.1
 phases:
   install:
     commands:
-      - flourish export --template samTemplate.yaml --output-template output-template.yaml
+      - flourish export --template samTemplate.yaml
 artifacts:
   type: zip
   files:
-    - output-template.yaml
+    - flourish-export.yml
