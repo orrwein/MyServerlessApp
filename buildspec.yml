@@ -1,0 +1,9 @@
+version: 0.1
+phases:
+  install:
+    commands:
+      - flourish export
+artifacts:
+  type: zip
+  files:
+    - flourish-export.yml
