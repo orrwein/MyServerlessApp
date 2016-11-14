@@ -2,7 +2,7 @@ version: 0.1
 phases:
   install:
     commands:
-      - flourish export --template samTemplate.yaml
+      - flourish export --template samTemplate.yaml --s3-bucket sam-artifacts
 artifacts:
   type: zip
   files:
