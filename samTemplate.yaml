@@ -1,16 +1,15 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
-Description: Silly Description
+Description: Outputs the time
 Resources:
-  GetFunction:
+  TimeFunction:
     Type: AWS::Serverless::Function
     Properties:
-      Handler: index.get
+      Handler: index.hander
       Runtime: nodejs4.3
-      Policies: AmazonDynamoDBReadOnlyAccess
       Events:
-        GetResource:
+        MyTimeApi:
           Type: Api
           Properties:
-            Path: /resource/{resourceId}
-            Method: get
+            Path: /TimeResource
+            Method: ANY

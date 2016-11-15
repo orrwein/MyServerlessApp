@@ -2,7 +2,18 @@ version: 0.1
 phases:
   install:
     commands:
-      - flourish export --template samTemplate.yaml --s3-bucket sam-artifacts
+      - npm install time
+      - aws s3 cp s3://aws-cli-orr/flourishawscli.zip awscli.zip
+      - unzip awscli.zip
+      - cd flourish-example
+      - mkdir -p ~/.aws/models/cloudformation/2010-05-15/
+      - cp service-2.json ~/.aws/models/cloudformation/2010-05-15/service-2.json
+      - virtualenv venv
+      - source ./venv/bin/activate
+      - pip install -r ./BotocoreDev/requirements.txt && pip install -e BotocoreDev/
+      - pip install -r ./AWSCLIDev/requirements.txt && pip install -e AWSCLIDev/
+      - cd ..
+      - aws cloudformation package --template samTemplate.yaml --s3-bucket sam-artifacts --output-template outputSAM.yaml
 artifacts:
   type: zip
   files:
