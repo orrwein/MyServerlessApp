@@ -3,8 +3,7 @@ phases:
   install:
     commands:
       - npm install time
-      - aws s3 cp s3://aws-cli-orr/flourishawscli.zip awscli.zip
-      - unzip awscli.zip
+      - aws s3 sync s3://aws-cli-orr/flourish-example flourish-example
       - cd flourish-example
       - mkdir -p ~/.aws/models/cloudformation/2010-05-15/
       - cp service-2.json ~/.aws/models/cloudformation/2010-05-15/service-2.json
