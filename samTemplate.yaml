@@ -5,11 +5,11 @@ Resources:
   TimeFunction:
     Type: AWS::Serverless::Function
     Properties:
-      Handler: index.hander
+      Handler: index.handler
       Runtime: nodejs4.3
       Events:
         MyTimeApi:
           Type: Api
           Properties:
             Path: /TimeResource
-            Method: ANY
+            Method: GET
