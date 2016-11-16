@@ -3,7 +3,8 @@ phases:
   install:
     commands:
       - npm install time
-      - aws cloudformation package --template samTemplate.yaml --s3-bucket sam-artifacts --output-template outputSAM.yaml
+      - aws cloudformation package help
+      #- aws cloudformation package --template samTemplate.yaml --s3-bucket sam-artifacts --output-template outputSAM.yaml
 artifacts:
   type: zip
   files:
