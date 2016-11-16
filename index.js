@@ -5,8 +5,11 @@ exports.handler = (event, context, callback) => {
 
     currentTime.setTimezone("America/Los_Angeles");
 
-     callback(null, {
+    callback(null, {
         statusCode: '200',
-        body: currentTime.toString(),
+        body: '<h1 style="color:#000080;">' + currentTime.toString() + '</h1>',
+        headers: {
+                  'Content-Type': 'text/html; charset=utf-8',
+    },
     });
 };
