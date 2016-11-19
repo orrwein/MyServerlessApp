@@ -9,7 +9,8 @@ Resources:
       Runtime: nodejs4.3
       Environment:
         Variables:
-          TIME_ZONE: !Ref Table
+          TIME_ZONE:
+            ref: timeZoneParam
       Events:
         MyTimeApi:
           Type: Api
