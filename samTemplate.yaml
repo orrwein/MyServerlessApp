@@ -7,6 +7,9 @@ Resources:
     Properties:
       Handler: index.handler
       Runtime: nodejs4.3
+      Environment:
+        Variables:
+          TIME_ZONE: !Ref Table
       Events:
         MyTimeApi:
           Type: Api

@@ -8,3 +8,5 @@ artifacts:
   type: zip
   files:
     - outputSAM.yaml
+    - beta.json
+    - prod.json
