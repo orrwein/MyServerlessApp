@@ -9,8 +9,8 @@ Resources:
       Runtime: nodejs4.3
       Environment:
         Variables:
-          TIME_ZONE:
-            ref: timeZoneParam
+          TIME_ZONE: "America/Los_Angeles"
+            #ref: timeZoneParam
       Events:
         MyTimeApi:
           Type: Api
