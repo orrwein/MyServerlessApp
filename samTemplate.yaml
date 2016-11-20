@@ -9,10 +9,14 @@ Resources:
       Runtime: nodejs4.3
       Environment:
         Variables:
-          TIME_ZONE: timeZone #!Ref timeZoneParam
+          TIME_ZONE: !Ref timeZoneParam
       Events:
         MyTimeApi:
           Type: Api
           Properties:
             Path: /TimeResource
             Method: GET
+
+Parameters:
+  timeZoneParam:
+    Type: String
