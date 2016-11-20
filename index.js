@@ -9,14 +9,14 @@ exports.handler = (event, context, callback) => {
 
     callback(null, {
         statusCode: '200',
-        body: '<h1 style="color:#000080;">' + 'The time in ' + timeZone +  ' is: ' + currentTime.toString() + '</h1>',
+        body: '<h1 style="color:#000080;">' + 'welcome to re:Invent!<br/>' + 'The time in ' + timeZone +  ' is: ' + currentTime.toString() + '</h1>',
         headers: {
                   'Content-Type': 'text/html; charset=utf-8',
     },
   });*/
   callback(null, {
       statusCode: '200',
-      body: '<h1 style="color:#000080;">' + process.env.TIME_ZONE + '</h1>',
+      body: '<h1 style="color:#000080;">' + 'welcome to re:Invent!<br/>' + 'new line' + '</h1>',
       headers: {
                 'Content-Type': 'text/html; charset=utf-8',
   },
