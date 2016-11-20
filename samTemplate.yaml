@@ -10,6 +10,7 @@ Resources:
       Environment:
         Variables:
           TIME_ZONE: !Ref timeZoneParam
+          STAGE: !Ref stage
       Events:
         MyTimeApi:
           Type: Api
@@ -19,4 +20,6 @@ Resources:
 
 Parameters:
   timeZoneParam:
+    Type: String
+  stage:
     Type: String
