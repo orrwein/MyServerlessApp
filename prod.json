@@ -1,6 +1,6 @@
 {
     "Parameters": {
         "timeZoneParam": "America/New_York",
-        "stage": "Prod"
+        "stage": "prod"
     }
 }

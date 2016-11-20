@@ -1,6 +1,6 @@
 {
     "Parameters": {
-        "timeZoneParam": "America/Los_Angeles"
-        "stage": "Beta"
+        "timeZoneParam": "America/Los_Angeles",
+        "stage": "beta"
     }
 }
