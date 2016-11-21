@@ -3,13 +3,11 @@ exports.handler = (event, context, callback) => {
     /*var time = require('time');
     //var currentTime = new time.Date();
 
-    // Replace with env var ("America/Los_Angeles" and "America/New_York")
-    var timeZone = process.env.TIME_ZONE;
-    currentTime.setTimezone(timeZone);
+    currentTime.setTimezone(process.env.TIME_ZONE);
 
     callback(null, {
         statusCode: '200',
-        body: '<h1 style="color:#000080;">' + 'welcome to my ' + process.env.STAGE + ' stage!<br/>' +
+        body: '<h1 style="color:#000080;">' + 'Welcome to my ' + process.env.STAGE + ' stage!<br/>' +
               'The time in ' + timeZone +  ' is: ' + currentTime.toString() + '</h1>',
         headers: {
                   'Content-Type': 'text/html; charset=utf-8',
